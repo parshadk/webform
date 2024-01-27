@@ -1,0 +1,92 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #DCF2F1, #7FC7D9, #365486, #0F1035);
+    /* background: radial-gradient(circle , #DCFFB7, #FF6868, #FFBB64, #FFEAA7);*/
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: linear-gradient(to bottom right, #7FC7D9, #365486);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(131, 108, 108, 0.1);
+    width: 400px;
+}
+
+form {
+    display: grid;
+    gap: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 2px; 
+    font-weight: bold;
+    color: #fff;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    color: #7e4a4a;
+    transition: border-color 0.3s ease, background-color 0.3s ease; 
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #032505; 
+    background-color: #82b4c4; 
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background: linear-gradient(to right, #48b44c, #45A049);
+    color: #fff;
+    padding: 14px; 
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+button:hover {
+    background: linear-gradient(to right, #b9ebbb, rgb(151, 240, 154));
+}
+
+#loader-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); 
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
